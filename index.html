@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ブロック崩し</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: #1a1a2e;
+      color: #eee;
+      font-family: system-ui, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    }
+    h1 { margin: 0 0 12px; font-size: 24px; }
+    canvas {
+      background: #0f0f1e;
+      border: 2px solid #444;
+      border-radius: 6px;
+      max-width: 100%;
+      height: auto;
+      touch-action: none;
+    }
+    p { margin: 12px 0 0; font-size: 14px; color: #aaa; }
+    #sound-toggle {
+      margin-top: 12px;
+      padding: 6px 14px;
+      font: inherit;
+      font-size: 14px;
+      color: #eee;
+      background: #2a2a44;
+      border: 1px solid #555;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    #sound-toggle:hover { background: #36365a; }
+  </style>
+</head>
+<body>
+  <h1>ブロック崩し</h1>
+  <canvas id="game" width="480" height="640"></canvas>
+  <button id="sound-toggle" type="button" aria-pressed="true">🔊 効果音: ON</button>
+  <p>← → キー / マウス / タッチで操作　|　スペース・クリックで開始　|　P で一時停止　|　M で効果音 ON/OFF</p>
+  <p>アイテム：W 拡大 ／ M マルチボール ／ S スロー ／ P 貫通 ／ ♥ 1UP</p>
+  <script src="main.js"></script>
+</body>
+</html>
